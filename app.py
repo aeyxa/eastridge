@@ -75,7 +75,7 @@ def invoice_item_create(request):
     description = request.params['description']
     amount = request.params['amount']
 
-    invoice_item = InvoiceItem.create(invoice_id,units,description,amount)
+    InvoiceItem.create(invoice_id,units,description,amount)
 
     return HTTPFound(location='/invoice/%s' % invoice_id)
 
