@@ -64,7 +64,7 @@ class InvoiceItem(Base):
         session.add(invoice_item)
         session.commit()
 
-        return invoice_item.id
+        return invoice_id
 
     def find(id):
 

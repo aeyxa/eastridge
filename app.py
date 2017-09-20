@@ -77,7 +77,7 @@ def invoice_item_create(request):
 
     invoice_item = InvoiceItem.create(invoice_id,units,description,amount)
 
-    return HTTPFound(location='/invoice/%s' % invoice_item)
+    return HTTPFound(location='/invoice/%s' % invoice_id)
 
 if __name__ == '__main__':
     with Configurator() as config:
